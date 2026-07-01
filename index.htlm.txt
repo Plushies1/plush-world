@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плюшевая Вселенная — Вязаные Игрушки</title>
+    <style>
+        /* Красивые шрифты и цвета для сайта */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7faf6; /* Нежный светлый фон */
+            color: #333;
+        }
+
+        /* Шапка сайта */
+        header {
+            background-color: #8cb867; /* Зелёный цвет, как панамка зайки */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        /* Контейнер для кнопок и контента */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        /* Кнопка Телеграм-канала */
+        .tg-button {
+            display: inline-block;
+            background-color: #24A1DE;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(36, 161, 222, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .tg-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Стиль секции с категориями */
+        .categories-title {
+            font-size: 1.8em;
+            color: #4a6b32;
+            margin-bottom: 20px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Кнопки категорий товаров */
+        .category-card {
+            background-color: white;
+            border: 2px solid #e1efe0;
+            border-radius: 20px;
+            padding: 30px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .category-card:hover {
+            border-color: #8cb867;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(140, 184, 103, 0.15);
+        }
+
+        .category-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .category-card h3 {
+            margin: 0;
+            color: #333;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ПЛЮШЕВАЯ ВСЕЛЕННАЯ</h1>
+        <p>Уникальные вязаные игрушки ручной работы ✨</p>
+    </header>
+
+    <div class="container">
+        <!-- Кнопка перехода в твой открытый ТГ-канал -->
+        <a href="https://t.me" target="_blank" class="tg-button">
+            ✈️ Заглянуть в мой Telegram-канал
+        </a>
+
+        <h2 class="categories-title">Выберите категорию игрушек:</h2>
+        
+        <!-- Кнопки-категории для твоих 30+ игрушек -->
+        <div class="categories-grid">
+            <div class="category-card">
+                <span class="icon">🔥</span>
+                <h3>Тренды и Герои</h3>
+            </div>
+            <div class="category-card">
+                <span class="icon">🌲</span>
+                <h3>Лесные и Домашние</h3>
+            </div>
+            <div class="category-card">
+                <span class="icon">🌊</span>
+                <h3>Морская кутерьма</h3>
+            </div>
+            <div class="category-card">
+                <span class="icon">🥞</span>
+                <h3>Вкусняшки и Природа</h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
