@@ -40,7 +40,6 @@
             text-align: center;
         }
 
-        /* Красивая кнопка Telegram */
         .tg-button {
             display: inline-block;
             background-color: #24A1DE;
@@ -72,7 +71,6 @@
             margin-bottom: 50px;
         }
 
-        /* Карта категории */
         .category-card {
             background-color: white;
             border: 2px solid #e1efe0;
@@ -94,7 +92,6 @@
             color: #333;
         }
 
-        /* Текст внутри категорий вместо простых эмодзи */
         .category-card .tag {
             display: inline-block;
             font-size: 0.8em;
@@ -169,13 +166,14 @@
             font-size: 0.95em;
             line-height: 1.5;
             margin-bottom: 20px;
+            min-height: 65px; /* Чтобы карточки были ровными */
         }
 
-        .size-selector {
+        .flavor-selector {
             margin-bottom: 20px;
         }
 
-        .size-label {
+        .flavor-label {
             font-size: 0.9em;
             font-weight: bold;
             color: #444;
@@ -183,17 +181,35 @@
             margin-bottom: 8px;
         }
 
+        .flavor-btn {
+            background: none;
+            border: 2px solid #ddd;
+            padding: 8px 14px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-right: 6px;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+
+        .flavor-btn.active {
+            border-color: #db7093; /* Розовый акцент для вкусов */
+            background-color: #fff0f5;
+            color: #b03060;
+        }
+
+        /* Стиль для кнопок размеров у зайки */
         .size-btn {
             background: none;
             border: 2px solid #ddd;
-            padding: 8px 16px;
+            padding: 8px 14px;
             border-radius: 10px;
             cursor: pointer;
             font-weight: 600;
             margin-right: 8px;
             transition: all 0.2s;
         }
-
         .size-btn.active {
             border-color: #8cb867;
             background-color: #eef7e8;
@@ -236,7 +252,6 @@
     </header>
 
     <div class="container">
-        <!-- КНОПКА ТЕЛЕГРАМА (Замени ТВОЯ_ССЫЛКА на имя канала, когда создашь его) -->
         <a href="https://t.me" target="_blank" class="tg-button">
             ✈️ Заглянуть в мой Telegram-канал
         </a>
@@ -269,39 +284,31 @@
             <!-- КАРТОЧКА ЗАЙКИ -->
             <div class="product-card">
                 <img src="https://unsplash.com" class="product-image" alt="Зайка в панамке">
-                
                 <div class="product-info">
                     <span class="product-tag">🔥 Популярное</span>
                     <h3 class="product-title">Зайка в панамке-лягушке</h3>
                     <p class="product-desc" id="bunny-desc">Идеальный пушистый зайка из ультра-мягкого плюша. Панамка в виде лягушонка и милые комбинезон-штанишки снимаются! Полностью гипоаллергенный.</p>
                     
-                    <div class="size-selector">
-                        <span class="size-label">Размер игрушки:</span>
+                    <div style="margin-bottom: 20px;">
                         <button class="size-btn" onclick="changeSize('small', '500 руб.', 'Маленький карманный зайка-брелок. Удобно носить на рюкзаке!')">Маленький</button>
                         <button class="size-btn active" onclick="changeSize('medium', '1200 руб.', 'Средний тактильный зайка (около 18 см). Идеальный размер для игр!')">Средний</button>
                         <button class="size-btn" onclick="changeSize('large', '2300 руб.', 'Большой плюшевый заяц-подушка в коробке. Шикарный подарок на день рождения!')">Большой</button>
                     </div>
 
                     <span class="product-price" id="bunny-price">1200 руб.</span>
-                    
                     <a href="https://t.me" target="_blank" class="order-btn">Хочу такого друга! ✨</a>
                 </div>
             </div>
 
-        </div>
-    </div>
-
-    <script>
-        function changeSize(size, price, desc) {
-            document.getElementById('bunny-price').innerText = price;
-            document.getElementById('bunny-desc').innerText = desc;
-            
-            const buttons = document.querySelectorAll('.size-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-        }
-    </script>
-
-</body>
-</html>
-
+            <!-- НОВАЯ КАРТОЧКА: ЧЕРЕПАШКА-ОРЕО -->
+            <div class="product-card">
+                <!-- Временная картинка черепашки -->
+                <img src="https://unsplash.com" class="product-image" id="turtle-img" alt="Черепашка Орео">
+                <div class="product-info">
+                    <span class="product-tag">🥞 Эксклюзив</span>
+                    <h3 class="product-title">Черепашка Oreo 🐢</h3>
+                    <p class="product-desc" id="turtle-desc">Уникальная черепашка, у которой вместо обычного панциря — легендарное печенье Орео! Выбери свой любимый вкус.</p>
+                    
+                    <!-- ТВОЯ ИДЕЯ: КНОПКИ ВКУСОВ -->
+                    <div class="flavor-selector">
+                        <span class="flavor-label">Выбери вкус панциря:</span>
