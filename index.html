@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плюшевая Вселенная — Вязаные Игрушки</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f7faf6; color: #333; }
+        header { background-color: #8cb867; color: white; text-align: center; padding: 40px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; }
+        header p { margin: 10px 0 0 0; font-size: 1.2em; opacity: 0.9; }
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; text-align: center; }
+        .tg-button { display: inline-block; background-color: #24A1DE; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1em; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(36, 161, 222, 0.3); transition: transform 0.2s; }
+        .tg-button:hover { transform: scale(1.05); }
+        .categories-title { font-size: 1.8em; color: #4a6b32; margin-bottom: 20px; }
+        .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 50px; }
+        .category-card { background-color: white; border: 2px solid #e1efe0; border-radius: 20px; padding: 25px 20px; cursor: pointer; transition: all 0.3s ease; }
+        .category-card:hover { border-color: #8cb867; transform: translateY(-3px); box-shadow: 0 8px 15px rgba(140, 184, 103, 0.15); }
+        .category-card h3 { margin: 0; font-size: 1.2em; color: #333; }
+        .category-card .tag { display: inline-block; font-size: 0.8em; background-color: #f0f7ee; color: #618c3d; padding: 4px 10px; border-radius: 10px; margin-bottom: 10px; font-weight: bold; }
+        .showcase-title { font-size: 2em; color: #333; margin-top: 40px; margin-bottom: 30px; text-align: left; border-left: 5px solid #8cb867; padding-left: 15px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left; }
+        .product-card { background-color: white; border-radius: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); overflow: hidden; border: 1px solid #eef3ed; transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-image { width: 100%; height: 320px; object-fit: cover; background-color: #eaeaea; }
+        .product-info { padding: 25px; }
+        .product-tag { background-color: #eef7e8; color: #5c8a36; padding: 5px 12px; border-radius: 50px; font-size: 0.85em; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+        .product-title { margin: 0 0 10px 0; font-size: 1.5em; color: #222; }
+        .product-desc { color: #666; font-size: 0.95em; line-height: 1.5; margin-bottom: 20px; min-height: 65px; }
+        .flavor-selector { margin-bottom: 20px; }
+        .flavor-label { font-size: 0.9em; font-weight: bold; color: #444; display: block; margin-bottom: 8px; }
+        .flavor-btn, .size-btn { background: none; border: 2px solid #ddd; padding: 8px 14px; border-radius: 10px; cursor: pointer; font-weight: 600; margin-right: 6px; margin-bottom: 8px; transition: all 0.2s; }
+        .flavor-btn.active { border-color: #db7093; background-color: #fff0f5; color: #b03060; }
+        .size-btn.active { border-color: #8cb867; background-color: #eef7e8; color: #4a6b32; }
+        .product-price { font-size: 1.6em; font-weight: bold; color: #333; margin-bottom: 20px; display: block; }
+        .order-btn { display: block; width: 100%; background-color: #8cb867; color: white; text-align: center; padding: 15px; text-decoration: none; border-radius: 15px; font-weight: bold; font-size: 1.1em; box-shadow: 0 4px 10px rgba(140, 184, 103, 0.3); transition: background-color 0.2s; }
+        .order-btn:hover { background-color: #79a456; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ПЛЮШЕВАЯ ВСЕЛЕННАЯ</h1>
+        <p>Уникальные вязаные игрушки ручной работы ✨</p>
+    </header>
+
+    <div class="container">
+        <a href="https://t.me" target="_blank" class="tg-button">✈️ Заглянуть в мой Telegram-канал</a>
+
+        <h2 class="categories-title">Каталог игрушек:</h2>
+        
+        <div class="categories-grid">
+            <div class="category-card"><span class="tag">NEW</span><h3>Тренды и Герои</h3></div>
+            <div class="category-card"><span class="tag">УЮТ</span><h3>Лесные и Домашние</h3></div>
+            <div class="category-card"><span class="tag">МОРЕ</span><h3>Морские жители</h3></div>
+            <div class="category-card"><span class="tag">НЯМ</span><h3>Вкусняшки и Природа</h3></div>
+        </div>
+
+        <h2 class="showcase-title">Популярное в наличии и под заказ</h2>
+        
+        <div class="product-grid">
+            
+            <!-- КАРТОЧКА ЗАЙКИ -->
+            <div class="product-card">
+                <img src="https://unsplash.com" class="product-image" alt="Зайка">
+                <div class="product-info">
+                    <span class="product-tag">🔥 Популярное</span>
+                    <h3 class="product-title">Зайка в панамке-лягушке 🐸</h3>
+                    <p class="product-desc" id="bunny-desc">Идеальный пушистый зайка из ультра-мягкого плюша. Панамка в виде лягушонка и милые комбинезон-штанишки снимаются! Полностью гипоаллергенный.</p>
+                    <div style="margin-bottom: 20px;">
+                        <button class="size-btn" onclick="changeSize('small', '500 руб.', 'Маленький зайка-брелок. Удобно носить на рюкзаке!')">Маленький</button>
+                        <button class="size-btn active" onclick="changeSize('medium', '1200 руб.', 'Средний тактильный зайка (около 18 см). Идеальный размер для игр!')">Средний</button>
+                        <button class="size-btn" onclick="changeSize('large', '2300 руб.', 'Большой плюшевый заяц в коробке. Шикарный подарок!')">Большой</button>
+                    </div>
+                    <span class="product-price" id="bunny-price">1200 руб.</span>
+                    <a href="https://t.me" target="_blank" class="order-btn">Хочу такого друга! ✨</a>
+                </div>
+            </div>
+
+            <!-- КАРТОЧКА ЧЕРЕПАШКИ -->
+            <div class="product-card">
+                <img src="https://unsplash.com" class="product-image" alt="Черепашка">
+                <div class="product-info">
+                    <span class="product-tag">🥞 Эксклюзив</span>
+                    <h3 class="product-title">Черепашка Oreo 🐢</h3>
+                    <p class="product-desc" id="turtle-desc">Уникальная черепашка, у которой вместо обычного панциря — легендарное печенье Орео! Выбери свой любимый вкус.</p>
+                    <div class="flavor-selector">
+                        <span class="flavor-label">Выбери вкус панциря:</span>
+                        <button class="flavor-btn active" onclick="changeFlavor('classic', '850 руб.', 'Классический Орео: чёрный шоколадный панцирь со снежно-белой начинкой.')">Классик</button>
+                        <button class="flavor-btn" onclick="changeFlavor('strawberry', '900 руб.', 'Клубничный Орео: нежно-розовый панцирь с ароматным клубничным кремом.')">Клубника</button>
+                        <button class="flavor-btn" onclick="changeFlavor('banana', '900 руб.', 'Банановый Орео: ярко-жёлтый солнечный панцирь с банановой начинкой.')">Банан</button>
+                    </div>
+                    <span class="product-price" id="turtle-price">850 руб.</span>
+                    <a href="https://t.me" target="_blank" class="order-btn">Хочу такого друга! ✨</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function changeSize(size, price, desc) {
+            document.getElementById('bunny-price').innerText = price;
+            document.getElementById('bunny-desc').innerText = desc;
+            const buttons = event.target.parentNode.querySelectorAll('.size-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        function changeFlavor(flavor, price, desc) {
+            document.getElementById('turtle-price').innerText = price;
+            document.getElementById('turtle-desc').innerText = desc;
+            const buttons = event.target.parentNode.querySelectorAll('.flavor-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
