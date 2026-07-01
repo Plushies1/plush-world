@@ -40,6 +40,7 @@
             text-align: center;
         }
 
+        /* Красивая кнопка Telegram */
         .tg-button {
             display: inline-block;
             background-color: #24A1DE;
@@ -71,11 +72,12 @@
             margin-bottom: 50px;
         }
 
+        /* Карта категории */
         .category-card {
             background-color: white;
             border: 2px solid #e1efe0;
             border-radius: 20px;
-            padding: 20px;
+            padding: 25px 20px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -86,18 +88,24 @@
             box-shadow: 0 8px 15px rgba(140, 184, 103, 0.15);
         }
 
-        .category-card .icon {
-            font-size: 2em;
-            margin-bottom: 5px;
-            display: block;
-        }
-
         .category-card h3 {
             margin: 0;
-            font-size: 1.1em;
+            font-size: 1.2em;
+            color: #333;
         }
 
-        /* --- НОВЫЙ СТИЛЬ: ВИТРИНА ТОВАРОВ --- */
+        /* Текст внутри категорий вместо простых эмодзи */
+        .category-card .tag {
+            display: inline-block;
+            font-size: 0.8em;
+            background-color: #f0f7ee;
+            color: #618c3d;
+            padding: 4px 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
         .showcase-title {
             font-size: 2em;
             color: #333;
@@ -163,7 +171,6 @@
             margin-bottom: 20px;
         }
 
-        /* Кнопки выбора размера */
         .size-selector {
             margin-bottom: 20px;
         }
@@ -229,48 +236,45 @@
     </header>
 
     <div class="container">
-        <!-- ТВОЯ ССЫЛКА НА ТГ КАНАЛ -->
+        <!-- КНОПКА ТЕЛЕГРАМА (Замени ТВОЯ_ССЫЛКА на имя канала, когда создашь его) -->
         <a href="https://t.me" target="_blank" class="tg-button">
             ✈️ Заглянуть в мой Telegram-канал
         </a>
 
-        <h2 class="categories-title">Выберите категорию игрушек:</h2>
+        <h2 class="categories-title">Каталог игрушек:</h2>
         
         <div class="categories-grid">
             <div class="category-card">
-                <span class="icon">🔥</span>
+                <span class="tag">NEW</span>
                 <h3>Тренды и Герои</h3>
             </div>
             <div class="category-card">
-                <span class="icon">🌲</span>
+                <span class="tag">УЮТ</span>
                 <h3>Лесные и Домашние</h3>
             </div>
             <div class="category-card">
-                <span class="icon">🌊</span>
-                <h3>Морская кутерьма</h3>
+                <span class="tag">МОРЕ</span>
+                <h3>Морские жители</h3>
             </div>
             <div class="category-card">
-                <span class="icon">🥞</span>
+                <span class="tag">НЯМ</span>
                 <h3>Вкусняшки и Природа</h3>
             </div>
         </div>
 
-        <!-- ВИТРИНА С КАРТОЧКАМИ -->
         <h2 class="showcase-title">Популярное в наличии и под заказ</h2>
         
         <div class="product-grid">
             
             <!-- КАРТОЧКА ЗАЙКИ -->
             <div class="product-card">
-                <!-- Сюда мы потом вставим реальную ссылку на твою фотку, пока тут временная заглушка -->
                 <img src="https://unsplash.com" class="product-image" alt="Зайка в панамке">
                 
                 <div class="product-info">
-                    <span class="product-tag">🔥 Тренды</span>
-                    <h3 class="product-title">Зайка в панамке-лягушке 🐸</h3>
+                    <span class="product-tag">🔥 Популярное</span>
+                    <h3 class="product-title">Зайка в панамке-лягушке</h3>
                     <p class="product-desc" id="bunny-desc">Идеальный пушистый зайка из ультра-мягкого плюша. Панамка в виде лягушонка и милые комбинезон-штанишки снимаются! Полностью гипоаллергенный.</p>
                     
-                    <!-- Выбор размера -->
                     <div class="size-selector">
                         <span class="size-label">Размер игрушки:</span>
                         <button class="size-btn" onclick="changeSize('small', '500 руб.', 'Маленький карманный зайка-брелок. Удобно носить на рюкзаке!')">Маленький</button>
@@ -280,7 +284,6 @@
 
                     <span class="product-price" id="bunny-price">1200 руб.</span>
                     
-                    <!-- Кнопка заказа ведет прямо в твой ТГ -->
                     <a href="https://t.me" target="_blank" class="order-btn">Хочу такого друга! ✨</a>
                 </div>
             </div>
@@ -288,13 +291,11 @@
         </div>
     </div>
 
-    <!-- Скрипт переключения цен и описания в зависимости от кнопки размера -->
     <script>
         function changeSize(size, price, desc) {
             document.getElementById('bunny-price').innerText = price;
             document.getElementById('bunny-desc').innerText = desc;
             
-            // Смена активной кнопки
             const buttons = document.querySelectorAll('.size-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
@@ -303,3 +304,4 @@
 
 </body>
 </html>
+
